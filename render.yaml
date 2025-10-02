@@ -1,22 +1,22 @@
 services:
   - type: web
     name: netflix-auth-backend
-    env: php
+    env: docker
     plan: free
-    buildCommand: ""
-    startCommand: "php -S 0.0.0.0:10000 -t ."
+    docker:
+      dockerfile: Dockerfile
     envVars:
       - key: SUPABASE_DB_HOST
-        value: "db.vfxnvqissazojbebkitb.supabase.co"
+        value: db.vfxnvqissazojbebkitb.supabase.co
       - key: SUPABASE_DB_USER
-        value: "postgres"
+        value: postgres
       - key: SUPABASE_DB_PASS
-        value: "nnrididjdjudud"
+        value: nnrididjdjudud
       - key: SUPABASE_DB_NAME
-        value: "postgres"
+        value: postgres
       - key: JWT_SECRET
-        value: "1A2C23F0F249C0A696D2E1D485B3F5B956FC509689B94F0CA364E305B4F737EF"
+        value: 1A2C23F0F249C0A696D2E1D485B3F5B956FC509689B94F0CA364E305B4F737EF
       - key: API_ENCRYPTION_KEY
-        value: "waJ8kUyJGvO30Ll6/H70Dt2KkhtdTW9MnI58oMv6EZc="
+        value: waJ8kUyJGvO30Ll6/H70Dt2KkhtdTW9MnI58oMv6EZc=
       - key: API_KEY
-        value: "c876b9b79d78a35eda09c3a3d25fcebdb07819cc9cb3edaeafd1c4a6e120ab27"
+        value: c876b9b79d78a35eda09c3a3d25fcebdb07819cc9cb3edaeafd1c4a6e120ab27
